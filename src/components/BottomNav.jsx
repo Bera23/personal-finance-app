@@ -54,17 +54,15 @@ export default function BottomNav({ activeTab, onTabChange, onAddClick }) {
         ))}
 
         {/* Elevated center add button */}
-        <div className="flex flex-col items-center justify-center relative flex-1">
+        <div className="flex-1 flex items-center justify-center">
           <button
             onClick={onAddClick}
-            className="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-600 transition-colors absolute"
-            style={{ bottom: '12px' }}
+            className="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-600 transition-colors -mt-6"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={2.5} className="w-7 h-7">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
             </svg>
           </button>
-          <span className="text-xs font-medium text-gray-400 dark:text-gray-500 mt-1 absolute" style={{ bottom: '-4px' }}>Add</span>
         </div>
 
         {/* Last two tabs */}

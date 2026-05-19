@@ -1,6 +1,5 @@
 import { NAV_TABS } from '../constants/navigation'
 
-// Icons for each navigation tab
 const icons = {
   [NAV_TABS.TRANSACTIONS]: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-6 h-6">
@@ -36,14 +35,14 @@ export default function BottomNav({ activeTab, onTabChange, onAddClick }) {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-10 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
-      <div className="flex items-end justify-around px-2 pb-2 pt-1">
+      <div className="flex items-center justify-around px-2" style={{ height: '64px' }}>
 
         {/* First two tabs */}
         {tabs.slice(0, 2).map((tab) => (
           <button
             key={tab.id}
             onClick={() => onTabChange(tab.id)}
-            className={`flex flex-col items-center gap-1 px-3 py-1 rounded-xl transition-colors ${
+            className={`flex flex-col items-center justify-center gap-1 px-3 h-full transition-colors ${
               activeTab === tab.id
                 ? 'text-blue-500'
                 : 'text-gray-400 dark:text-gray-500'
@@ -55,16 +54,17 @@ export default function BottomNav({ activeTab, onTabChange, onAddClick }) {
         ))}
 
         {/* Elevated center add button */}
-        <div className="flex flex-col items-center -mt-8">
+        <div className="flex flex-col items-center justify-center relative" style={{ width: '64px' }}>
           <button
             onClick={onAddClick}
-            className="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-600 transition-colors"
+            className="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-600 transition-colors absolute"
+            style={{ bottom: '12px' }}
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={2.5} className="w-7 h-7">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
             </svg>
           </button>
-          <span className="text-xs font-medium text-gray-400 dark:text-gray-500 mt-1">Add</span>
+          <span className="text-xs font-medium text-gray-400 dark:text-gray-500 mt-1 absolute" style={{ bottom: '-4px' }}>Add</span>
         </div>
 
         {/* Last two tabs */}
@@ -72,7 +72,7 @@ export default function BottomNav({ activeTab, onTabChange, onAddClick }) {
           <button
             key={tab.id}
             onClick={() => onTabChange(tab.id)}
-            className={`flex flex-col items-center gap-1 px-3 py-1 rounded-xl transition-colors ${
+            className={`flex flex-col items-center justify-center gap-1 px-3 h-full transition-colors ${
               activeTab === tab.id
                 ? 'text-blue-500'
                 : 'text-gray-400 dark:text-gray-500'

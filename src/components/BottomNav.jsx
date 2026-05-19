@@ -55,7 +55,7 @@ export default function BottomNav({ activeTab, onTabChange, onAddClick }) {
         ))}
 
         {/* Elevated center add button */}
-        <div className="flex flex-col items-center -mt-6">
+        <div className="flex flex-col items-center -mt-8">
           <button
             onClick={onAddClick}
             className="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-600 transition-colors"

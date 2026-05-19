@@ -35,7 +35,7 @@ export default function BottomNav({ activeTab, onTabChange, onAddClick }) {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-10 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
-      <div className="flex items-center justify-around px-2" style={{ height: '64px' }}>
+      <div className="flex items-center justify-evenly" style={{ height: '64px' }}>
 
         {/* First two tabs */}
         {tabs.slice(0, 2).map((tab) => (
@@ -53,11 +53,11 @@ export default function BottomNav({ activeTab, onTabChange, onAddClick }) {
           </button>
         ))}
 
-        {/* Elevated center add button */}
-        <div className="flex-1 flex items-center justify-center">
+       {/* Elevated center add button */}
+<div className="flex items-center justify-center">
           <button
             onClick={onAddClick}
-            className="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-600 transition-colors -mt-6"
+           className="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-600 transition-colors -mt-16"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={2.5} className="w-7 h-7">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />

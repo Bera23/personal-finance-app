@@ -42,7 +42,7 @@ export default function BottomNav({ activeTab, onTabChange, onAddClick }) {
           <button
             key={tab.id}
             onClick={() => onTabChange(tab.id)}
-            className={`flex flex-col items-center justify-center gap-1 px-3 h-full transition-colors ${
+            className={`flex-1 flex flex-col items-center justify-center gap-1 px-3 h-full transition-colors ${
               activeTab === tab.id
                 ? 'text-blue-500'
                 : 'text-gray-400 dark:text-gray-500'
@@ -70,7 +70,7 @@ export default function BottomNav({ activeTab, onTabChange, onAddClick }) {
           <button
             key={tab.id}
             onClick={() => onTabChange(tab.id)}
-            className={`flex flex-col items-center justify-center gap-1 px-3 h-full transition-colors ${
+            className={`flex-1 flex flex-col items-center justify-center gap-1 px-3 h-full transition-colors ${
               activeTab === tab.id
                 ? 'text-blue-500'
                 : 'text-gray-400 dark:text-gray-500'
